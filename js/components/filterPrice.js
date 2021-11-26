@@ -1,5 +1,4 @@
-import { createHtml } from "./createHtml.js";
-import { displayMessage } from "./displayMessage.js";
+import { displayResult } from "./displayResult.js";
 
 export const filterPrice = (results, targetElement) => {
   const search = document.querySelector(".search");
@@ -15,16 +14,13 @@ export const filterPrice = (results, targetElement) => {
         return true;
 
 
-      } else {
-        displayMessage("error", "No results matching your filter search", ".results");
       }
-
 
 
     });
 
     console.log(filterdNumbers);
-    createHtml(filterdNumbers, targetElement);
+    displayResult(filterdNumbers, targetElement);
 
   };
 

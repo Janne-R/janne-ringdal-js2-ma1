@@ -1,4 +1,4 @@
-import { createHtml } from "./components/createHtml.js";
+import { displayResult } from "./components/displayResult.js";
 import { filterPrice } from "./components/filterPrice.js";
 import { displayMessage } from "./components/displayMessage.js";
 
@@ -12,7 +12,7 @@ const getResults = async () => {
 
     console.log(json);
 
-    createHtml(json, ".results");
+    displayResult(json, ".results");
     filterPrice(json, ".results");
 
   } catch (error) {

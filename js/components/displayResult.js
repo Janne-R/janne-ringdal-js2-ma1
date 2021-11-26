@@ -1,10 +1,10 @@
-export const createHtml = (data, targetElement) => {
+export const displayResult = (data, targetElement) => {
   const resultContainer = document.querySelector(targetElement);
   resultContainer.innerHTML = "";
 
-  /*if (data.length === 0) {
+  if (data.length === 0) {
     resultContainer.innerHTML = "No results matching your search";
-  }*/
+  }
 
   data.forEach((item) => {
     resultContainer.innerHTML += `
