@@ -1,5 +1,6 @@
 import { createHtml } from "./components/createHtml.js";
 import { filterPrice } from "./components/filterPrice.js";
+import { displayMessage } from "./components/displayMessage.js";
 
 const url = "https://fakestoreapi.com/products";
 
@@ -15,7 +16,7 @@ const getResults = async () => {
     filterPrice(json, ".results");
 
   } catch (error) {
-    console.log(error);
+    displayMessage("error", "Sorry we are having problems with the API call", ".results");
   }
 
 
