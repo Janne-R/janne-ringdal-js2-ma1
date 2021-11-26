@@ -4,7 +4,6 @@ import { displayMessage } from "./components/displayMessage.js";
 
 const url = "https://fakestoreapi.com/products";
 
-
 const getResults = async () => {
   try {
     const response = await fetch(url);

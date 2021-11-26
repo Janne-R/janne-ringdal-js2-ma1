@@ -8,14 +8,10 @@ export const filterPrice = (results, targetElement) => {
 
     const searchValue = event.target.value;
 
-
     const filterdNumbers = results.filter(function (result) {
       if (result.price <= searchValue) {
         return true;
-
-
       }
-
 
     });
 
