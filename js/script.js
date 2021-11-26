@@ -1,25 +1,24 @@
+import { createHtml } from "./components/createHtml.js";
+import { filterPrice } from "./components/filterPrice.js";
+
 const url = "https://fakestoreapi.com/products";
 
-const resultContainer = document.querySelector(".results");
 
 const getResults = async () => {
+  try {
+    const response = await fetch(url);
+    const json = await response.json();
 
-  const response = await fetch(url);
-  const json = await response.json();
+    console.log(json);
 
-  console.log(json);
+    createHtml(json, ".results");
+    filterPrice(json, ".results");
 
-  resultContainer.innerHTML = "";
+  } catch (error) {
+    console.log(error);
+  }
 
-  json.forEach((item) => {
-    resultContainer.innerHTML += `
-                                    <div class ="result">
-                                      <h2>${item.title}</h2>
-                                      <p>Price: ${item.price},-</p>
-                                    </div>
-                                    
-                                  `;
-  });
+
 
 }
 
