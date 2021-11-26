@@ -18,8 +18,6 @@ const getResults = async () => {
     displayMessage("error", "Sorry we are having problems with the API call", ".results");
   }
 
-
-
 }
 
 getResults();
